@@ -2,4 +2,35 @@
 
 /* 回答はここに書いてね */
 
+.q10__box{
+  position: relative;
+  width: 500px;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 5px solid #222;
+}
+
+.q10__box::before,
+.q10__box::after{
+  position: absolute;
+  content: "";
+  border: 20px solid transparent; /*透明のボーダー*/
+}
+
+.q10__box::before{
+  bottom: -45px; /*afterのbottomの数値が近いほど重なるボーダーが大きくなる*/
+  left: 30px;
+  border-top-color:  #222; /*上だけボーダーを表示 ボーダーの境界線は斜めなので三角形になる*/
+}
+
+.q10__box::after{
+  bottom: -38px;
+  left: 30px;
+  border-top-color: #fff;
+}
+
+
 /* 回答はここに書いてね */

@@ -2,4 +2,98 @@
 
 /* 回答はここに書いてね */
 
+/*float*/
+.inner_clearfix::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.is-box-left,
+.is-box-right{
+  float: left;
+  box-sizing: border-box;
+  width: 225px;
+  font-size: 16px;
+}
+/*float*/
+
+/*table*/
+.is-box-right{
+  margin-left: 50px;
+}
+
+.is-table{
+  display: table;
+}
+
+.is-tablecell{
+  display: table-cell;
+  width: 225px;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.is-tablecell.right{
+  padding-left: 50px; /*marginは使えない　なぜ？*/
+}
+/*table*/
+
+/*inline-block*/
+.is-inner-inlineblock{
+  font-size: 0; /*htmlの改行が半角スペース分として余白を作るので、0にすることでmargin-leftを指定した箇所がレイアウトを崩さずに余白ができる*/
+}
+
+.is-box-inlineblock{
+  display: inline-block;
+  width: 225px;
+  font-size: 16px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin-left: 50px;
+}
+
+.is-box-inlineblock:first-child{
+  margin-left: 0;
+}
+/*inline-block*/
+
+/*flex*/
+.is-flexbox{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.is-flexitem{
+  width: 225px;
+  font-size: 16px;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+/*flex*/
+
+/*margin inline-block*/
+.is-innerbox{
+  font-size: 0;
+}
+
+.is-stable{
+  display: inline-block;
+  width: 300px;
+  font-size: 16px;
+}
+
+.is-flexible{
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: -300px; /*paddingの300px分が無くなるイメージ*/
+  padding-left: 350px;
+  font-size: 16px;
+  vertical-align: top;
+}
+/*margin inline-block*/
+
+
 /* 回答はここに書いてね */
