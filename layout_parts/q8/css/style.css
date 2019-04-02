@@ -1,5 +1,291 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q8__small{
+  padding: 0 15px;
+  border-radius: 3px;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 26px;
+  margin-left: 10px;
+}
 
+.q8__small:first-child,
+.q8__middle:first-child{
+  margin-left: 0;
+}
+
+.is-common{
+  background-color: #00bcd4;
+  color: #FFF;
+}
+
+.is-error{
+  background-color: #ff4081;
+  color: #FFF;
+}
+
+.is-disabled{
+  background-color: #e5e5e5;
+  color: #FFF;
+}
+
+.is-shadow{
+  color: #222;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .12),0 1px 4px rgba(0, 0, 0, .12);
+}
+
+.q8__middle{
+  padding: 0 20px;
+  line-height: 32px;
+  border-radius: 5px;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.q8__large{
+  padding: 0 25px;
+  line-height: 38px;
+  border-radius: 7px;
+  font-size: 24px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.q8__small:first-of-type,
+.q8__middle:first-of-type,
+.q8__large:first-of-type{
+  margin-left: 0;
+}
+
+.q8__form__box{
+  width: 700px;
+  padding: 20px;
+  background-color: #ECF1F2;
+  margin: 0 auto;
+}
+
+.q8__form__title{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.q8__form__title::before{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.q8__form__title__text{
+  position: relative; /*重なってる線が消える なぜ？*/
+  background-color: #ECF1F2;
+  font-weight: bold;
+  display: inline-block; /*指定しないと線が消える なぜ？*/
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+.clearfix{
+  margin-top: 20px;
+}
+
+.clearfix:first-child{
+  margin-top: 0;
+}
+
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.q8__left__side{
+  width: 300px;
+  float: left;
+}
+
+.q8__left__side__title{
+  float: left;
+  width: 100px;
+  text-align: right;
+  line-height: 25px;
+}
+
+.is-required{
+  color: #F00;
+}
+
+.q8__left__side__item{
+  float: right;
+  width: 180px;
+}
+
+.q8__input{
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  width: 100%;
+  background-color: #FFF;
+  box-sizing: border-box;
+}
+
+.input-init{
+  outline: none; /*アウトラインの太さ スタイル 色を指定できる*/
+  appearance: none; /*要素を標準的な外観にする*/
+  border: none;
+  -webkit-appearance: none; /*フォーム要素の外観を初期化*/
+}
+
+.q8__input:focus,
+.q8__textarea:focus{
+  box-shadow: 0 0 7px #00BCD4; /*要素がフォーカスされた時のスタイル*/
+}
+
+.q8__left__side__radio{
+  display: none;
+}
+
+.q8__radio__text{
+  position: relative;
+  padding: 3px 3px 3px 20px;
+  display: inline-block;
+}
+
+.q8__radio__text::before{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  margin-top: -8px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.q8__left__side__radio:checked + /*radioボタンがチェックされたことを表す afterの中身がチェックの状態*/
+.q8__radio__text::after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 4px;
+  margin-top: -4px;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #00BCD4;
+  cursor: pointer;
+}
+
+.q8__select{
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 12px;
+  cursor: pointer;
+}
+
+.select-menu{
+  position: relative;
+}
+
+.select-menu::after{
+  position: absolute;
+  content: "";
+  top: 4px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-right: 2px solid #E5E5E5;
+  border-bottom: 2px solid #E5E5E5;
+  transform: rotate(45deg); /*要素の回転を指定できる マイナスの値も指定可能 プラスの値は時計回り マイナスの値は反時計回り */
+  pointer-events: none; /*要素のしたをターゲットにするよう指定*/
+}
+
+.q8__checkbox{
+  text-align: right;
+}
+
+.q8__checkbox__btn{
+  display: none;
+}
+
+.q8__checkbox__text{
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+}
+
+.q8__checkbox__text::before{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  content: "";
+  background-color: #FFF;
+  margin-top: -9px;
+}
+
+.q8__checkbox__btn:checked +
+.q8__checkbox__text::after{
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  width: 8px;
+  height: 16px;
+  border-right: 3px solid #00BCD4;
+  border-bottom: 3px solid #00BCD4;
+  transform: rotate(45deg);
+  content: "";
+  margin-top: -14px;
+}
+
+.q8__left__side__submit{
+  text-align: right;
+  margin-top: 20px;
+}
+
+.q8__submit__btn{
+  padding: 0 10px;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: #00BCD4;
+  font-size: 16px;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.q8__submit__btn:active{
+  background-color: #fff;
+  color: #00BCD4;
+}
+
+.q8__right__side__textarea{
+  float: right;
+  width: 380px;
+}
+
+.q8__textarea{
+  width: 100%;
+  height: 203px;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 12px;
+  resize: none;
+  box-sizing: border-box;
+}
 /* 回答はここに書いてね */
