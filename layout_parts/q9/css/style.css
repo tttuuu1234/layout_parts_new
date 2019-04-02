@@ -16,7 +16,6 @@
 }
 
 .q9__box__img:hover .q9__img{
-  transition: .5s;
   transform: scale(1.5);
 }
 

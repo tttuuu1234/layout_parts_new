@@ -7,22 +7,17 @@
   background-color: #eff3f4;
 }
 
-.top_table,
-.under_table{
+.table{
   display: table;
   width: 100%;
-}
-
-.under_table{
   margin-top: 20px;
 }
 
-.top_table_beige,
-.top_table_pink,
-.top_table_blue,
-.under_table_yellow,
-.under_table_red,
-.under_table_green{
+.table:first-child{
+  margin-top: 0;
+}
+
+.color-cell{
   display: table-cell;
   padding: 20px;
   text-align: center;

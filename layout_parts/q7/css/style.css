@@ -8,20 +8,20 @@
   clear: both;
 }
 
-.is-box-left,
-.is-box-right{
+.float-box{
   float: left;
   box-sizing: border-box;
   width: 225px;
   font-size: 16px;
+  margin-left: 50px;
+}
+
+.float-box:first-child{
+  margin-left: 0;
 }
 /*float*/
 
 /*table*/
-.is-box-right{
-  margin-left: 50px;
-}
-
 .is-table{
   display: table;
 }

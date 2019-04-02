@@ -9,15 +9,12 @@
 }
 
 tr, td, th{
-  border: 1px solid #dede;
+  border: 1px solid #dedede;
   padding: 10px 0;
   vertical-align: middle;
 }
 
-.heading > tr:first-child,
-.food > tr > th:first-child,
-.cal > tr > th:first-child
-{ /*trでの最初の要素*/
+th{ /*trでの最初の要素*/
   font-size: 18px;
   line-height: 26px;
   background-color: #2244aa;
